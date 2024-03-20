@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src = "app.js"></script>
+        <title>ENCRIPTADOR</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="imagenes/Logo.png" alt="imagen logo alura">
+        </header>
+        <main>
+            <section class="seccion-1">
+                <input type="text" id="textoEncriptado" class="textarea"  placeholder="Escribe tu texto aqui">
+                
+                <div class="contenedor-botones">
+                    <div class="info-texto">
+                        <p >&#9888;Solo letras minusculas y sin acentos.</p>  
+                    </div>
+                    <button type="button" id="botonEncriptado">Encriptar</button>            
+                    <button type="button" id="botonDesencriptado">Desencriptar</button>       
+                    
+                </div>               
+            </section>
+
+            <section class="seccion-2">
+                <div class="resultado" id="resultado" style="display: none;">
+                    <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea> 
+                </div>
+                    <button type="button" id="botonCopiar">COPIAR</button>
+    
+                <div class="contenedor-imagen">
+                    <img src="imagenes/Muñeco.png" alt="Muñeco">
+                    <h3>No se encontro ningun mensaje</h3>
+                    <p>Escribe el texto que desea encriptar o desencriptar</p>
+                </div>
+                
+                    
+            </section>
+        </main>
+
+        <footer class="pie-pagina">
+            <div class="redes-sociales">
+                <p>Made with <span> &copy; </span>by Emanuel Poou. </p>
+                <a href="https://github.com/EmanuelBenjamin" target="_blank"> <img src="imagenes/GitHub-Mark-ea2971cee799.png" alt="logo-gh" class="icono"></a>
+                <a href="https://www.linkedin.com/" target="_blank"> <img src="imagenes/LinkedIn_icon.svg.png" alt="logo-lk" class="icono"></a>
+            </div>
+        </footer>
+        
+        
+    </body>
+    
+</html> 

@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#d6cccb;
+}
+
+header{
+    width: 100%;
+    height: 55px;
+    background-color: rgb(244, 239, 255);
+}
+
+header img{
+    margin-left: 3px;/*modifica el margen derecho de la imagen alura*/
+    padding: 5px; /* modifica la altura de la de la imagen alura */
+}
+
+main{
+    width: 100%;
+    height: 450px; /*aca se modifica la altura del main */
+    background-color: rgb(244, 239, 255);
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+section{
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.seccion-1{
+    width: 60%;
+    margin-left: 20px;
+    background-color: rgb(244, 239, 255); /*aca le di color al interior de la seccion uno*/
+   
+}
+
+.seccion-2{
+    width: 30%; /*aca modifico el ancho de toda la seccion 2*/
+    margin-right: 65px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.resultado{
+    width: 100%;
+    height: 99%; /*aca le doy altura al texto o resultado*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-imagen{
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    padding: 20%;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-imagen img{
+    max-width: 100%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.contenedor-imagen h3{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.contenedor-imagen p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+.textarea{
+    width: 80%;
+    height: 40%;
+    resize: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px; /*altura a el texto de ingreso*/
+    font-size: 18px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    background-color: rgb(244, 239, 255); /*aca le di color al textarea o donde introduzco el texto a encriptar */
+}
+
+#textoDesencriptado{
+    width: 80%;
+    height: 60%;
+    resize: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 0;/*aca borro el borde del area de texto*/
+    outline: 0;
+    padding-top: 90px;/*aca le doy altura a mi boton copiar*/
+    
+}
+
+
+.contenedor-botones{
+    text-align: center;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.info-texto {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    display: flex;
+    align-items:center;
+    margin: 4rem 0 4rem 3rem;
+     
+}
+
+.info-texto p{
+    margin-left: 0.5;
+}
+
+
+.boton-encriptar, 
+.boton-desencriptar,
+#botonEncriptado,
+#botonDesencriptado,
+.boton-copiar,
+#botonCopiar{
+    width: 300px; /*ancho de los botones encriptar y desencriptar */
+    height: 60px; /*altura*/
+    color: #0a3871;
+    font-size: 17px; /*tama;o de la letra */
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition-duration:  0.5s;/*con esta propiedad le doy la velocidad de transicion para que se exppanda el boton*/
+
+    
+}
+
+.boton-encriptar:hover, 
+.boton-desencriptar:hover,
+#botonEncriptado:hover,
+#botonDesencriptado:hover,
+.boton-copiar:hover,
+#botonCopiar:hover{
+    transform: scale(1.1); /*con esta propiedadle doy la escala pa para que le el boton  se expanda */
+
+}
+
+.boton-encriptar,
+#botonEncriptado{
+    background-color: #0a3871;
+    color: white;
+    
+    
+}
+
+.boton-desencriptar,
+#botonDesencriptado{
+    background-color: rgb(244, 239, 255);
+}
+
+.boton-copiar,
+#botonCopiar{
+    width: 300px;
+    height: 60px;
+    background-color: white;
+    display: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    
+}
+
+.pie-pagina{
+    background-color: rgb(244, 239, 255);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    bottom: 0;
+    
+}
+
+.icono{
+    margin-left: 1rem;
+    width:  2rem;
+    height:  2rem;
+}
+
+.icono:hover {
+    scale: 1.15;
+}
+
+
+/* estilos  para tablet en posicion vertical */
+@media only screen and (max-width: 890px) and (orientation: portrait){ 
+    main {
+        flex-direction:column;
+        height: auto;
+        align-items: center;
+
+    } 
+    header{
+        padding: 25px;
+        width: auto;
+    }
+   
+    .seccion-1{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .seccion-2{
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+   
+    .contenedor-botones{
+        margin-top: 20%;
+    }
+    .info-texto{
+        margin: 1 0 1 0;
+        font-size: 0.7rem;
+    }
+    .textarea{
+        padding: 75px;
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .resultado{
+        height: auto;
+    }
+    .boton-encriptar,
+    #botonEncriptado,
+    .boton-desencriptar,
+    #botonDesencriptado,
+    .boton-copiar,
+    #botonCopiar {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+    }
+
+    .pie-pagina {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    }
+
+    .redes-sociales {
+        width: 90%;
+        border-bottom: 1px solid #ccc; /* Puedes ajustar el color según tus preferencias */
+    }
+}
+
+/*estilos para tablet en posicion horizontal*/
+
+@media only screen and (max-width:768px) and (orientation: landscape){
+    main {
+
+    }
+
+}
+
+/*Estilos para celular en posicion vertical*/
+
+@media only screen and (max-width: 375px) and (orientation: portrait){
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+    header{
+        width: auto;
+    }
+
+    .seccion-1,
+    .seccion-2{
+        width: 75%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .contenedor-botones{
+        margin: 1rem 0 4rem 0;
+
+    }
+
+    .info-texto{
+        margin: 0 0 4rem 0.5rem;
+    }
+
+    .textarea{
+        width:  100%;
+        margin-top:5px;
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+    .resultado{
+        height:auto;
+    }
+
+    .boton-encriptar,
+    #botonEncriptado,
+    .boton-desencriptar,
+    #botonDesencriptado{
+        margin-bottom: 1rem;
+        width: 100px;
+        height: 45px;
+        font-size: 14px;
+        
+    }
+}
+
+/*Estilo  para celulares en horizontal*/
+
+@media only screen and (max-width: 375px) and (orientation: landscape){
+    main{
+
+    }
+}
